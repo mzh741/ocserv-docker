@@ -11,7 +11,7 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 
 # install compiler, dependencies, tools , dnsmasq
 RUN apt-get update && apt-get install -y \
-    wget ocserv gnutls-bin 
+    wget ocserv gnutls-bin iptables
 
 # generate [ca-key.pem] -> ca-cert.pem [ca-key]
 RUN certtool --generate-privkey --outfile /opt/certs/ca-key.pem && certtool --generate-self-signed --load-privkey /opt/certs/ca-key.pem --template /opt/certs/ca-tmp --outfile /opt/certs/ca-cert.pem
