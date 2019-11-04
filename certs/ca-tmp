@@ -1,7 +1,7 @@
-cn = "Your desired authority name"
-organization = "Your desired orgnization name"
+cn = "CLOUDCONE"
+organization = "CLOUDCONE"
 serial = 1
-expiration_days = 3650
+expiration_days = 365
 ca
 signing_key
 cert_signing_key
