@@ -22,5 +22,6 @@ iptables -t nat -A POSTROUTING -j MASQUERADE
 iptables -A FORWARD -p tcp --tcp-flags SYN,RST SYN -j TCPMSS --clamp-mss-to-pmtu 
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
+iptables-save
 # run it
 ocserv -c /etc/ocserv/ocserv.conf -f $@
