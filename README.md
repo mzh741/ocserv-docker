@@ -1,6 +1,6 @@
 ```
 wget -qO- https://get.docker.com/ | sh
-cd ~ && git clone https://github.com/mzh741/ocserv-docker.git
+cd ~ && git clone -b master https://github.com/mzh741/ocserv-docker.git
 cd ~/ocserv-docker && docker build --no-cache -t ocserv-docker .
 docker run -d --privileged --name ocserv-docker -v ~/ocserv-docker/ocserv:/etc/ocserv -p 999:999/tcp ocserv-docker
 docker logs ocserv-docker
