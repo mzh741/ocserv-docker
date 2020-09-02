@@ -4,6 +4,7 @@ cd ~ && git clone -b master https://github.com/mzh741/ocserv-docker.git
 cd ~/ocserv-docker && docker build --no-cache -t ocserv-docker .
 docker run -d --privileged --name ocserv-docker -v ~/ocserv-docker/ocserv:/etc/ocserv -p 999:999/tcp -p 999:999/udp ocserv-docker
 docker logs ocserv-docker
+docker start ocserv-docker
 ```
 
 Win, Mac, Linux [Link1](https://www.haskins.yale.edu/docdepot/published/WG/show.php?q=SEFTSzAx-58c63f59), [iOS](https://itunes.apple.com/us/app/cisco-anyconnect/id392790924?mt=8), [Android](https://play.google.com/store/apps/details?id=com.cisco.anyconnect.vpn.android.avf&hl=en)
